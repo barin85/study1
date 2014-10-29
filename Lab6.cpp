@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+double calc_y(double x);
 void main()
 {
 	double x, y;
@@ -10,6 +11,11 @@ void main()
 		cout << "Error! divide by zero";
 		return;
 	}
-	y = (x + 10) / (x - 20);
+	y = calc_y(x);
 	cout << "y = " << y;
+}
+
+double calc_y(double x)
+{
+	return (x + 10) / (x - 20);
 }
